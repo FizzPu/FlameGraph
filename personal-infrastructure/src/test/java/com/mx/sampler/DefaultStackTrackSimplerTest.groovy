@@ -52,6 +52,7 @@ class DefaultStackTrackSimplerTest extends Specification {
       int a = i * 2 * 32 * 123123131;
       reentrantLock.unlock();
     }
+    Thread.sleep(2000)
 
   }
 
@@ -59,5 +60,6 @@ class DefaultStackTrackSimplerTest extends Specification {
     for (int i = 1; i <= 50000; i++) {
       int a = i * 2 * 32 * 13131;
     }
+    Thread.sleep(400)
   }
 }
