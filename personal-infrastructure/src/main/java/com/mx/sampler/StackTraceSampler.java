@@ -1,5 +1,7 @@
 package com.mx.sampler;
 
+import com.mx.sampler.context.SampleTaskContext;
+
 /**
  * @author FizzPu
  * @since 2024/2/26 15:36

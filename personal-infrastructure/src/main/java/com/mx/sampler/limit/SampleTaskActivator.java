@@ -1,12 +1,13 @@
-package com.mx.sampler;
+package com.mx.sampler.limit;
+
+import com.mx.sampler.task.SampleTask;
 
 /**
  * 采样任务的启动器；
  * 启动采样任务之前，调用activate方法判断是否激活该采样任务；
  *
- * @author xiejian
- * @version 1.0.0
- * @since 2022/11/21 16:35
+ * @author FizzPu
+ * @since 2024/2/28 10:50
  */
 public interface SampleTaskActivator {
   SampleTaskActivator DEFAULT_ACTIVATOR = task -> true;

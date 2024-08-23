@@ -1,13 +1,14 @@
-package com.mx.sampler;
+package com.mx.sampler.limit;
+
+import com.mx.sampler.context.SampleTaskContext;
 
 import java.util.concurrent.TimeUnit;
 
 /**
  * 采样频率限制器
  *
- * @author xiejian
- * @version 1.0.0
- * @since 2022/12/07 17:11
+ * @author FizzPu
+ * @since 2024/2/28 10:50
  */
 public interface SampleRateLimiter {
   /**

@@ -1,4 +1,4 @@
-package com.mx.sampler;
+package com.mx.sampler.stack;
 
 import com.google.common.base.Preconditions;
 import com.google.common.cache.Cache;

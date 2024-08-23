@@ -1,4 +1,4 @@
-package com.mx.sampler;
+package com.mx.sampler.task;
 
 import javax.annotation.Nonnull;
 import java.util.concurrent.ThreadFactory;

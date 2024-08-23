@@ -1,4 +1,4 @@
-package com.mx.sampler;
+package com.mx.sampler.storage;
 
 /**
  * @author FizzPu

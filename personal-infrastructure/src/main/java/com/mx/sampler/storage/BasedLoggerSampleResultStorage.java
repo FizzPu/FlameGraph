@@ -1,4 +1,4 @@
-package com.mx.sampler;
+package com.mx.sampler.storage;
 
 import com.mx.utils.JsonUtils;
 import org.slf4j.Logger;
@@ -12,7 +12,7 @@ import java.util.*;
  * @since 2024/5/30 下午9:13
  */
 public class BasedLoggerSampleResultStorage implements SampleResultStorage {
-  public static final String DEFAULT_LOGGER_NAME = "STACK_TRACE_SAMPLER_LOGGER";
+  public static final String DEFAULT_LOGGER_NAME = "BasedLoggerSampleResultStorage";
   private static final String DATETIME_FORMAT = "yyyy-MM-dd HH:mm:ss.SSS";
   private final Logger logger;
   

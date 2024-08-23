@@ -1,5 +1,6 @@
-package com.mx.sampler;
+package com.mx.sampler.storage;
 
+import com.mx.sampler.context.SampleTaskContext;
 import com.mx.utils.JsonUtils;
 
 /**

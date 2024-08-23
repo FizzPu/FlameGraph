@@ -1,5 +1,8 @@
-package com.mx.sampler;
+package com.mx.sampler.task;
 
+import com.mx.sampler.context.SampleTaskContext;
+import com.mx.sampler.stack.SampleResultCollector;
+import com.mx.sampler.stack.StackTraceTruncateHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +28,7 @@ public abstract class AbstractSampleTask implements SampleTask {
   
   protected SampleTaskContext sampleTaskContext;
   protected final SampleResultCollector sampleResultCollector;
-  private final StackTraceTruncateHandler stackTraceTruncateHandler;
+  protected final StackTraceTruncateHandler stackTraceTruncateHandler;
   
   public AbstractSampleTask(SampleTaskContext sampleTaskContext, SampleResultCollector sampleResultCollector,
     long startTimeMillis, StackTraceTruncateHandler stackTraceTruncateHandler) {

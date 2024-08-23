@@ -31,7 +31,7 @@ class FlameGraphLogEntry {
   }
 
   String getStackTrace() {
-    if (classIdMap.isBlank()) {
+    if (classIdMap == null || classIdMap.isBlank()) {
       return stackTrace
     }
 

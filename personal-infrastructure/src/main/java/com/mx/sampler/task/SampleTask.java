@@ -1,4 +1,7 @@
-package com.mx.sampler;
+package com.mx.sampler.task;
+
+import com.mx.sampler.storage.DumpResult;
+import com.mx.sampler.context.SampleTaskContext;
 
 /**
  * @author FizzPu

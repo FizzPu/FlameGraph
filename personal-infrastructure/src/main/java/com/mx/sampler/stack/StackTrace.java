@@ -1,4 +1,4 @@
-package com.mx.sampler;
+package com.mx.sampler.stack;
 
 import java.util.Arrays;
 
@@ -13,10 +13,6 @@ public class StackTrace implements OnceSampleResult {
   public StackTrace(StackTraceElement[] elements, StackTraceTruncateHandler stackTraceTruncateHandler) {
     this.elements = elements;
     this.stackTraceTruncateHandler = stackTraceTruncateHandler;
-  }
-  
-  public static StackTrace fromThread(Thread thread) {
-    return new StackTrace(thread.getStackTrace());
   }
   
   /**

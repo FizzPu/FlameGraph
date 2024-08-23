@@ -1,4 +1,11 @@
-package com.mx.sampler;
+package com.mx.sampler.task;
+
+import com.mx.sampler.context.SampleTaskContext;
+import com.mx.sampler.stack.SampleResultCollector;
+import com.mx.sampler.stack.StackTrace;
+import com.mx.sampler.stack.StackTraceTruncateHandler;
+import com.mx.sampler.storage.DumpResult;
+import com.mx.sampler.storage.StackTraceDumpResult;
 
 /**
  * @author FizzPu
@@ -22,7 +29,7 @@ public class BasedThreadSimpleTask extends AbstractSampleTask {
     if (this.targetThread == null) {
       return;
     }
-    StackTrace stackTrace = StackTrace.fromThread(this.targetThread);
+    StackTrace stackTrace = new StackTrace(this.targetThread.getStackTrace(), stackTraceTruncateHandler);
     if (TaskState.STARTED.equals(getTaskState())) {
       this.sampleResultCollector.collect(stackTrace);
     }

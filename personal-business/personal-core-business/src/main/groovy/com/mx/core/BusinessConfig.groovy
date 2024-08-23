@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component
  */
 @Component
 class BusinessConfig {
-  private String flameGraphPath = "/Users/FizzPu/Desktop/FizzALL/efficient_tool/FlameGraph/flamegraph.pl"
+  private String flameGraphPath = "/Users/fizz/WorkSpace/EfficientTools/FlameGraph/flamegraph.pl"
 
   String getFlameGraphPath() {
      return System.getProperty("flameGraphPath", flameGraphPath)
