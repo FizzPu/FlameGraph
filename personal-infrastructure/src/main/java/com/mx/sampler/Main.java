@@ -17,10 +17,17 @@ public class Main {
     // 进程启动，开启采样器
     stackTraceSample.startUp();
     
-    
     // 构建采样上下文
     class HttpSampleContext extends DefaultSampleContext {
       private String url = "/mock/test";
+      
+      public String getUrl() {
+        return url;
+      }
+      
+      public void setUrl(String url) {
+        this.url = url;
+      }
     }
     SampleTaskContext httpSampleContext = new HttpSampleContext();
     
