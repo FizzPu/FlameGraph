@@ -93,8 +93,6 @@ end$>
 
 通过访问http://106.14.180.9:8080/flamegraph/logs，账号：admin， 密码：panzer，生成可视化的结果。
 
-![image-20240824124915855](/sampale-image-ui.png)
-
 ![image-20240824125717630](/sample-result.png)
 
 ![image-20240823174702139](/flame-graph-demo.png)
@@ -106,6 +104,15 @@ end$>
 
 
 ### 基本原理
+启动一个采样线程，每隔一段时间对Java堆栈进行采集，然后序列化成火焰图UI的形式。
+
+![sample-diagram](/sample-diagram.png)
+
+参考资料:
+- https://www.ruanyifeng.com/blog/2017/09/flame-graph.html
+- https://github.com/brendangregg/FlameGraph
 
 ### 后续
 
+- 支持spring-boot-starter, 开箱即用
+- 优化UI展示

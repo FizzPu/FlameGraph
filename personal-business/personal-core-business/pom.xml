@@ -22,11 +22,6 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.apache.zookeeper</groupId>
-            <artifactId>zookeeper</artifactId>
-            <version>3.6.5-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
     <build>

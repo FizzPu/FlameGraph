@@ -96,3 +96,6 @@ swagger-model.json
 /deploy_tool_snapshot
 !/deploy_tool_inner_release
 /deploy_tool_inner_release
+
+./deploy.sh
+.gitignore
