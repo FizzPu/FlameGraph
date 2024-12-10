@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.mx.yahaha.request.trace.autoconfigure.RequestTraceAutoConfig

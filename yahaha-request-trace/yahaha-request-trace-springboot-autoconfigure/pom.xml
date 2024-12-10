@@ -18,9 +18,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>org.yahaha</groupId>
+    <groupId>org.mx</groupId>
     <artifactId>yahaha-request-trace-springboot-autoconfigure</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
@@ -47,12 +47,10 @@
         </dependency>
 
         <dependency>
-            <groupId>org.yahaha</groupId>
-            <artifactId>yahaha-request-trace</artifactId>
-            <version>${yahaha-request-trace}</version>
-            <optional>true</optional>
+            <groupId>org.mx</groupId>
+            <artifactId>yahaha-request-trace-core</artifactId>
+            <version>${project.version}</version>
         </dependency>
-
     </dependencies>
 
 
