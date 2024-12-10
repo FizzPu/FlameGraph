@@ -1,0 +1,6 @@
+[submodule "yahaha-request-trace-toolchain/construction/Flame"]
+	path = yahaha-request-trace-toolchain/construction/Flame
+	url = https://github.com/brendangregg/FlameGraph.git
+[submodule "yahaha-request-trace-toolchain/construction/FlameGraph"]
+	path = yahaha-request-trace-toolchain/construction/FlameGraph
+	url = https://github.com/brendangregg/FlameGraph.git
