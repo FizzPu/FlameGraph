@@ -1,7 +1,9 @@
 package org.mx.yahaha.toolchain.server;
 
+import org.mx.yahaha.toolchain.ApplicationProperties;
 import org.mx.yahaha.toolchain.ui.UiComponent;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.MethodParameter;
