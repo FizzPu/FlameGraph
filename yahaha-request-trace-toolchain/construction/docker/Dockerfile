@@ -1,4 +1,4 @@
-#1. 指定基础镜像. arm64结构
+#1. 指定基础镜像. amd64结构
 FROM --platform=linux/amd64 centos:8
 
 #2. 安装perl:5.36.1等其他工具
@@ -26,25 +26,22 @@ ENV JRE_HOME=${JAVA_HOME}/jre
 ENV CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 ENV PATH=${JAVA_HOME}/bin:$PATH
 
-RUN java -version
-
 # 4. 构建配置
 #4.0 软件目录 java lib、construction 目录、logs、config目录
 
-#4.1 拷贝火焰图工具集到/dev/yahaha/construction/FlameGraph
-COPY /Users/fizz/WorkSpace/Codes/CompanyCodes/sensorsdata/yahaha/yahaha-request-trace-toolchain/construction/FlameGraph /dev/yahaha/construction/
+#4.1 拷贝火焰图工具集到/yahaha/construction/FlameGraph
+COPY FlameGraph/ /yahaha/construction/FlameGraph/
 
-#4.2 拷贝application.properties 到/dev/yahaha/config/，并修改applicaition.properties 的配置项：yahaha.request.trace.toolchain.flame_graph_path=/dev/yahaha/construction/FlameGraph/flamegraph.pl
-COPY application.properties /dev/yahaha/config/
+#4.2 拷贝application.properties 到/yahaha/config/，并修改applicaition.properties 的配置项：yahaha.request.trace.toolchain.flame_graph_path=/yahaha/construction/FlameGraph/flamegraph.pl
+COPY application.properties /yahaha/config/
 
-# 4.3 拷贝lib库，如jar包到/dev/yahaha/lib
-COPY yahaha-request-trace-toolchain-1.0.jar /dev/yahaha/lib/
+# 4.3 拷贝lib库，如jar包到/yahaha/lib
+COPY yahaha-request-trace-toolchain-1.0.jar /yahaha/lib/yahaha-request-trace-toolchain-1.0.jar
 
 #5 暴露http 服务端口
 EXPOSE 8080
 
 #6 启动脚本
-CMD ["java", "-jar", "/dev/yahaha/lib/yahaha-request-trace-toolchain-1.0.jar", "--spring.config.location", "/dev/yahaha/config/application.preperties", "daemon off;"]
-
+CMD ["java", "-Dspring.config.location=/yahaha/config/application.properties", "-jar", "/yahaha/lib/yahaha-request-trace-toolchain-1.0.jar", "daemon off;"]
 #ENTRYPOINT ["top", "-b"]
 # docker run -p 8080:8080 yahaha-toolchain
